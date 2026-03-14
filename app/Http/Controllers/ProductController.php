@@ -26,7 +26,7 @@ class ProductController extends Controller
         try{
         $validated = $request->validate([
             "name"=>["string","required","min:3",
-            Rule::unique("product","name")
+            Rule::unique("products","name")
             ],
             "price"=>"required|numeric",
             "image"=>"required|image|mimes:jpg,png,jpeg,gif"
